@@ -1,18 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mberquer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/24 10:07:57 by mberquer          #+#    #+#             */
-/*   Updated: 2021/11/29 14:38:19 by mberquer         ###   ########.fr       */
+/*   Created: 2021/11/29 14:42:34 by mberquer          #+#    #+#             */
+/*   Updated: 2021/11/29 15:10:14 by mberquer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int	x)
+#include <stdlib.h>
+
+void	*ft_calloc(size_t	nmemb, size_t	size)
 {
-	if((x >= 'A' && x <= 'z') || (x >= 'a' && x <= 'z'))
-		return 1;
-	return 0;
-}
+	int*	ptr;
+
+	if (nmemb && size)
+	{
+		ptr = malloc((nmemb * size));
+

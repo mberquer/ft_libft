@@ -1,18 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mberquer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/24 10:07:57 by mberquer          #+#    #+#             */
-/*   Updated: 2021/11/29 14:38:19 by mberquer         ###   ########.fr       */
+/*   Created: 2021/11/29 12:32:13 by mberquer          #+#    #+#             */
+/*   Updated: 2021/11/29 12:37:07 by mberquer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int	x)
+void *ft_memchr(const void	*s, int	c, size_t	n)
 {
-	if((x >= 'A' && x <= 'z') || (x >= 'a' && x <= 'z'))
-		return 1;
-	return 0;
+	int	i;
+
+	i = 0;
+	while(i < n)
+		if(s[i] == c)
+			return *s[i];
+	return NULL;
 }
