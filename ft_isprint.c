@@ -6,13 +6,13 @@
 /*   By: mberquer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 10:22:06 by mberquer          #+#    #+#             */
-/*   Updated: 2021/11/24 13:56:31 by mberquer         ###   ########.fr       */
+/*   Updated: 2021/11/30 13:14:25 by mberquer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(int	x)
+int	ft_isprint(int c)
 {
-	if(x > 0 && x < 177)
-		return 1;
-	return 0;
+	if (c > 0 && c < 177)
+		return (1);
+	return (0);
 }

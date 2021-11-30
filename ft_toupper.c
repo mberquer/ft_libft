@@ -6,13 +6,13 @@
 /*   By: mberquer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 12:12:00 by mberquer          #+#    #+#             */
-/*   Updated: 2021/11/29 12:14:28 by mberquer         ###   ########.fr       */
+/*   Updated: 2021/11/30 13:32:39 by mberquer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_toupper(int	c)
+int	ft_toupper(int c)
 {
-	if(c >= 'a' && c <= 'z')
-		return c - 32;
-	return c;
+	if (c >= 'a' && c <= 'z')
+		return (c - 32);
+	return (c);
 }

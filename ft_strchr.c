@@ -6,20 +6,14 @@
 /*   By: mberquer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 12:17:04 by mberquer          #+#    #+#             */
-/*   Updated: 2021/11/29 12:38:15 by mberquer         ###   ########.fr       */
+/*   Updated: 2021/11/30 17:00:13 by mberquer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	*ft_strchr(const char	*s, int	c)
+char	*ft_strchr(const char *s, int c)
 {
-	int	i;
-
-	i = 0;
-	while(s[i])
-	{
-		if(s[i] == c)
-			return *s[i];
-		i++;
-	}
-	return NULL;
+	while (*s != c)
+		if (!*s++)
+			return (0);
+	return ((char *)s);
 }

@@ -6,7 +6,7 @@
 /*   By: mberquer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 12:38:42 by mberquer          #+#    #+#             */
-/*   Updated: 2021/11/29 12:40:38 by mberquer         ###   ########.fr       */
+/*   Updated: 2021/11/30 13:39:33 by mberquer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@ int	ft_memcmp(const void	*s1, const void	*s2, size_t	n)
 	int	i;
 
 	i = 0;
-	while(s1[i] == s2[i] && i < n)
+	while (s1[i] == s2[i] && i < n)
 		i++;
 	return (s1[i] - s2[i]);
 }

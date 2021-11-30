@@ -6,13 +6,13 @@
 /*   By: mberquer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 10:19:18 by mberquer          #+#    #+#             */
-/*   Updated: 2021/11/24 13:55:41 by mberquer         ###   ########.fr       */
+/*   Updated: 2021/11/30 13:14:33 by mberquer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(int	x)
+int	ft_isascii(int c)
 {
-	if(x >= 0 && x <= 255)
-		return 1;
-	return 0;
+	if (c >= 0 && c <= 255)
+		return (1);
+	return (0);
 }

@@ -6,13 +6,13 @@
 /*   By: mberquer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 10:11:22 by mberquer          #+#    #+#             */
-/*   Updated: 2021/11/24 13:55:01 by mberquer         ###   ########.fr       */
+/*   Updated: 2021/11/30 13:11:25 by mberquer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(int	x)
+int	ft_isdigit(int c)
 {
-	if(x >= '0' && x <= '9')
-		return 1;
-	return 0;
+	if (c >= '0' && c <= '9')
+		return (1);
+	return (0);
 }

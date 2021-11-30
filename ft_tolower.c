@@ -6,13 +6,13 @@
 /*   By: mberquer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 12:15:22 by mberquer          #+#    #+#             */
-/*   Updated: 2021/11/29 12:16:21 by mberquer         ###   ########.fr       */
+/*   Updated: 2021/11/30 13:33:38 by mberquer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_tolower(int	c)
+int	ft_tolower(int c)
 {
-	if(c >= 'A' && c <='Z')
-		return c + 32;
-	return c;
+	if (c >= 'A' && c <= 'Z')
+		return (c + 32);
+	return (c);
 }
