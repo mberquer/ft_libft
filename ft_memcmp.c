@@ -6,16 +6,26 @@
 /*   By: mberquer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 12:38:42 by mberquer          #+#    #+#             */
-/*   Updated: 2021/11/30 13:39:33 by mberquer         ###   ########.fr       */
+/*   Updated: 2021/12/01 16:52:58 by mberquer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int	ft_memcmp(const void	*s1, const void	*s2, size_t	n)
 {
-	int	i;
+	size_t	i;
+	const unsigned char *x;
+	const unsigned char *y;
 
 	i = 0;
-	while (s1[i] == s2[i] && i < n)
+	x = (const unsigned char *)s1;
+	y = (const unsigned char *)s2;
+	while (i < n)
+	{
+		if (x[i] != y[i])
+		   return (x[i] - y[i]);	
 		i++;
-	return (s1[i] - s2[i]);
+	}
+	return (0);
 }

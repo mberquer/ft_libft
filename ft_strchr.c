@@ -6,14 +6,20 @@
 /*   By: mberquer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 12:17:04 by mberquer          #+#    #+#             */
-/*   Updated: 2021/11/30 17:00:13 by mberquer         ###   ########.fr       */
+/*   Updated: 2021/12/01 17:26:03 by mberquer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s != c)
-		if (!*s++)
+	char	*str;
+
+	str = (char *)s;
+	while (*str != c)
+	{
+		if (*str == '\0')
 			return (0);
-	return ((char *)s);
+		str++;
+	}
+	return (str);
 }

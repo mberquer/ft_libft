@@ -6,14 +6,16 @@
 /*   By: mberquer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 12:40:54 by mberquer          #+#    #+#             */
-/*   Updated: 2021/11/30 13:40:21 by mberquer         ###   ########.fr       */
+/*   Updated: 2021/12/01 17:05:57 by mberquer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 char	*ft_strnstr(const char	*big, const char	*little, size_t	len)
 {
-	int	i;
-	int	j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	if (little)
@@ -24,10 +26,10 @@ char	*ft_strnstr(const char	*big, const char	*little, size_t	len)
 			while (big[i + j] == little[j])
 			{
 				if (little[j++] == '\0')
-					return (*big[i]);
+					return ((char *)&big[i]);
 			}
 		}
-		return (NULL);
+		return (0);
 	}
-	return (*big);
+	return ((char *)big);
 }
