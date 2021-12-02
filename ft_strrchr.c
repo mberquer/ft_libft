@@ -6,22 +6,22 @@
 /*   By: mberquer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 12:21:35 by mberquer          #+#    #+#             */
-/*   Updated: 2021/11/30 17:03:01 by mberquer         ###   ########.fr       */
+/*   Updated: 2021/12/02 13:30:07 by mberquer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
-int	ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	int	i;
-	int	j;
+	char *s2;
 
-	i = 0;
-	j = 0;
-	while (s[i])
+	while (*s)
 	{
-		if (s[i] == c)
-			j = i;
-		i++;
+		if ((char) *s == (char) c)
+			s2 = (char *) s;
+		s++;
 	}
-	return (j);
+	if (c == 0)
+		return ((char *)s);
+	return (s2);
 }
