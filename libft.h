@@ -6,7 +6,7 @@
 /*   By: mberquer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/30 14:12:18 by mberquer          #+#    #+#             */
-/*   Updated: 2021/12/02 14:40:59 by mberquer         ###   ########.fr       */
+/*   Updated: 2021/12/07 07:52:41 by mberquer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,9 @@
 	void	*ft_calloc(size_t nmemb, size_t	size);
 	char	*ft_strdup(const char *s);
 	void	*ft_memchr(const void *s, int c, size_t n);
+	char	*ft_substr(char const *s, unsigned int start, size_t len);
+	char	*ft_strjoin(char const *s1, char const *s2);
+	char	*ft_strtrim(char const *s1, char const *set);
+	char	**ft_split(char const *s, char c);
 
 #endif
