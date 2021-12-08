@@ -6,7 +6,7 @@
 /*   By: mberquer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 12:55:23 by mberquer          #+#    #+#             */
-/*   Updated: 2021/12/01 19:09:27 by mberquer         ###   ########.fr       */
+/*   Updated: 2021/12/07 15:39:38 by mberquer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ int	ft_atoi(const char	*nptr)
 	i = 0;
 	num = 0;
 	minus = 1;
-
 	while (nptr[i])
 	{
 		while (((nptr[i] >= 9) && (nptr[i] <= 13)) || (nptr[i] == ' '))

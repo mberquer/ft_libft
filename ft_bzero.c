@@ -6,7 +6,7 @@
 /*   By: mberquer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 13:59:53 by mberquer          #+#    #+#             */
-/*   Updated: 2021/11/30 16:45:50 by mberquer         ###   ########.fr       */
+/*   Updated: 2021/12/07 15:28:46 by mberquer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_bzero(void *s, size_t n)
 	char	*s2;
 	size_t	i;
 
-	s2 = (char*)s;
+	s2 = (char *)s;
 	i = 0;
 	while (i < n)
 	{

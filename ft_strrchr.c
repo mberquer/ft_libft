@@ -6,14 +6,14 @@
 /*   By: mberquer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 12:21:35 by mberquer          #+#    #+#             */
-/*   Updated: 2021/12/02 13:30:07 by mberquer         ###   ########.fr       */
+/*   Updated: 2021/12/07 15:38:58 by mberquer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {
-	char *s2;
+	char	*s2;
 
 	while (*s)
 	{

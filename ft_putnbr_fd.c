@@ -1,24 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mberquer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/24 14:56:22 by mberquer          #+#    #+#             */
-/*   Updated: 2021/12/07 15:38:12 by mberquer         ###   ########.fr       */
+/*   Created: 2021/12/07 14:25:26 by mberquer          #+#    #+#             */
+/*   Updated: 2021/12/07 15:45:15 by mberquer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char	*dst, const char	*src, size_t	size)
+void	ft_putnbr_fd(int n, int fd)
 {
-	size_t	dst_len;
+	long int	n2;
 
-	dst_len = ft_strlen(dst);
-	if (!size || dst_len >= size)
-		return (size + ft_strlen(src));
-	ft_strlcpy(&dst[dst_len], src, size - dst_len);
-	return (dst_len + ft_strlen(src));
+	n2 = (long int)n;
+	if (n2 < 0)
+	{
+		ft_putchar_fd('-', fd);
+		n2 *= -1;
+	}
+	if (n2 / 10 != 0)
+		ft_putnbr_fd(n2 / 10, fd);
+	ft_putchar_fd((n2 % 10) + 48, fd);
 }
