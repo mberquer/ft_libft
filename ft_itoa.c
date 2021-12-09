@@ -6,7 +6,7 @@
 /*   By: mberquer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/07 11:09:59 by mberquer          #+#    #+#             */
-/*   Updated: 2021/12/07 15:43:48 by mberquer         ###   ########.fr       */
+/*   Updated: 2021/12/08 12:24:01 by mberquer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,16 @@ static size_t	ft_count(int n)
 		n /= 10;
 	}
 	return (i);
+}
+
+static void	ft_word(char *s, long int n, int i)
+{
+	while (n != 0)
+	{
+		s[i] = (n % 10) + 48;
+		n /= 10;
+		i--;
+	}
 }
 
 char	*ft_itoa(int n)
@@ -54,11 +64,6 @@ char	*ft_itoa(int n)
 		result[i] = '0';
 		return (result);
 	}
-	while (n2 != 0)
-	{
-		result[i] = (n2 % 10) + 48;
-		n2 /= 10;
-		i--;
-	}
+	ft_word(result, n2, i);
 	return (result);
 }

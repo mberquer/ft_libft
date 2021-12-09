@@ -33,7 +33,15 @@ SRCS	= 	ft_isalpha.c\
 		ft_putendl_fd.c\
 		ft_putnbr_fd.c
 
+SRCSBON	=	ft_lstnew.c\
+		ft_lstadd_front.c\
+		ft_lstsize.c\
+		ft_lstlast.c\
+		ft_lstadd_back.c
+
 OBJS	= ${SRCS:.c=.o}
+
+OBJSBON	= ${SRCSBON:.c=.o}
 
 NAME	= libft.a
 
@@ -52,12 +60,16 @@ ${NAME}:	${OBJS}
 		ar rc ${NAME} ${OBJS}
 
 clean:
-		${RM} ${OBJS}
+		${RM} ${OBJS} 
+		${RM} ${OBJSBON}
 
 fclean:		clean
 		${RM} ${NAME}
 
 re:		fclean	all
 
-.PHONY:		all clean fclean re
+bonus:	${NAME} ${OBJSBON}
+	ar rc ${NAME} ${OBJSBON}
+
+.PHONY:		all clean fclean re bonus
 
