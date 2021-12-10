@@ -6,9 +6,11 @@
 /*   By: mberquer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/09 16:08:56 by mberquer          #+#    #+#             */
-/*   Updated: 2021/12/09 16:10:17 by mberquer         ###   ########.fr       */
+/*   Updated: 2021/12/10 14:50:01 by mberquer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {

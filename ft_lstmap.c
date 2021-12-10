@@ -6,10 +6,13 @@
 /*   By: mberquer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/09 16:26:23 by mberquer          #+#    #+#             */
-/*   Updated: 2021/12/09 16:27:17 by mberquer         ###   ########.fr       */
+/*   Updated: 2021/12/10 14:50:47 by mberquer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-
+	return (0);
+}
