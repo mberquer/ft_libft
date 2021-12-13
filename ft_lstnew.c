@@ -6,7 +6,7 @@
 /*   By: mberquer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 15:05:03 by mberquer          #+#    #+#             */
-/*   Updated: 2021/12/08 15:55:45 by mberquer         ###   ########.fr       */
+/*   Updated: 2021/12/13 14:38:16 by mberquer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ t_list	*ft_lstnew(void *content)
 
 	new = (t_list *)malloc(sizeof(t_list));
 	if (!new)
-		return(NULL);
+		return (NULL);
 	new -> content = content;
 	new -> next = NULL;
 	return (new);
