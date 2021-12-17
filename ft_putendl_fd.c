@@ -6,7 +6,7 @@
 /*   By: mberquer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/07 14:15:08 by mberquer          #+#    #+#             */
-/*   Updated: 2021/12/07 15:44:34 by mberquer         ###   ########.fr       */
+/*   Updated: 2021/12/17 16:38:23 by mberquer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,15 @@
 void	ft_putendl_fd(char *s, int fd)
 {
 	size_t	i;
-	char	c;
 
 	i = 0;
-	c = '\n';
-	while (s[i])
+	if (s)
 	{
-		write(fd, &s[i], 1);
-		i++;
+		while (s[i])
+		{
+			write(fd, &s[i], 1);
+			i++;
+		}
+		write(fd, "\n", 1);
 	}
-	write(fd, &c, 1);
 }
